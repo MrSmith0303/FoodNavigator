@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         saveBtn= findViewById(R.id.idBtnSaveList)
         addsBtn.setOnClickListener{addInfo()}
         setRecyclerView()
-
+        saveBtn.setOnClickListener{databaseHelper.saveRecipes(versionList)}
     }
 
 
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             val hozz = etelHozzavalo.text.toString()
             versionList.add(Versions("CodeName: $names","$hozz"))
             Toast.makeText(this, "Sikeres hozzáadás", Toast.LENGTH_SHORT).show()
-            databaseHelper.saveRecipes(versionList)
+
             dialog.dismiss()
         }
         addDialog.setNegativeButton("Cancel")
