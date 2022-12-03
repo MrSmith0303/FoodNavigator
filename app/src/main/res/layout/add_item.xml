@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="15dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/shape_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+        <TextView
+            android:text="Étel hozzáadása"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textSize="19dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Név"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/etelNev"
+
+            >
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hozzávalók és elkészítés"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/etelHozzavalo"
+
+            >
+        </EditText>
+    </LinearLayout>
+</LinearLayout>
+
