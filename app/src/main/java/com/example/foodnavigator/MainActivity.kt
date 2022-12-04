@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         saveBtn= findViewById(R.id.idBtnSaveList)
         addsBtn.setOnClickListener{addInfo()}
         setRecyclerView()
-        saveBtn.setOnClickListener{databaseHelper.saveRecipes(versionList)}
+        saveBtn!!.setOnClickListener{databaseHelper!!.saveRecipes(versionList)}
     }
 
 

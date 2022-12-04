@@ -11,21 +11,21 @@ class DatabaseHelper(context: Context) {
     private val gson: Gson
 
     init {
-        recipesDatabase = context.getSharedPreferences("recipesDatabase", Context.MODE_PRIVATE)
+        recipesDatabase = context!!.getSharedPreferences("recipesDatabase", Context.MODE_PRIVATE)
         gson = Gson()
     }
 
     fun saveRecipes(recipes: ArrayList<Versions>) {
         val editor = recipesDatabase.edit()
-        editor.putString("recipes", gson.toJson(recipes))
-        editor.apply()
+        editor?.putString("recipes", gson?.toJson(recipes))
+        editor?.apply()
     }
 
     val recipes : ArrayList<Versions>
         get() {
-            val recipesString = recipesDatabase.getString("recipes", null)
-            val recipesListType = object : TypeToken<ArrayList<Versions?>?>() {}.type
-            val recipes = gson.fromJson<ArrayList<Versions>>(recipesString, recipesListType)
+            val recipesString = recipesDatabase?.getString("recipes", null)
+            val recipesListType = object : TypeToken<ArrayList<Versions?>?>() {}?.type
+            val recipes = gson?.fromJson<ArrayList<Versions>>(recipesString, recipesListType)
             return recipes ?: ArrayList()
         }
 }

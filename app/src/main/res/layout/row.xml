@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Code Name"
-            android:textColor="@color/black"
+            android:textColor="#A1000000"
             android:textSize="22sp"
             android:textStyle="bold"></TextView>
 
